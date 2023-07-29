@@ -1,0 +1,335 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* responsive styling.start */
+
+@media all and (min-width:1440px){ 
+    html{display: none;}
+}
+/* Desktop design ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (max-width:1440px){
+    body       {background-color: rgba(0, 128, 0, 0);font-size: 24px;     }
+    nav        {height: 100px;               }
+    .logo      {left: 85%;top: 50%;transform: translateY(-50%);}
+    button     {height: 45px;width: 150px;   }
+    .button{
+        position: absolute;
+        left: 10%; 
+        top: 50%;
+        transform: translateY(-50%);
+        height: 50px;
+    } 
+    .menu{
+        position: absolute;
+        right: 15%;
+        top: 50%;
+        transform: translateY(-56%);
+    }    
+    .menu > li {width: 110px;                }
+}
+/* iPad design ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media all and (max-width: 834px){
+    body           {background-color: rgba(240, 30, 30, 0);font-size: 20px;}
+    nav            {height: 100px;               } 
+    .logo          {left: 85%;top: 50%;transform: translateY(-50%);}
+    button         {height: 40px;width: 90px;    }
+    .button{
+        position: absolute;
+        left: 5%; 
+        top: 50%;
+        transform: translateY(-50%);
+        height: 50px;
+    } 
+    .menu{
+    position: absolute;
+    right: 15%;
+    top: 50%;
+    transform: translateY(-56%);
+    }
+    .menu > li     {width:85px;                  }
+    .p             {flex-basis: 47%;             }
+    .vertical-line {display: none;               }
+}
+/* Mobile design ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media all and (max-width: 360px){
+    body {background-color: rgba(23, 29, 142, 0);font-size: 16px;}
+    nav  {
+        position: relative;
+        width: 100%;
+        height: 215px;
+        background-color: rgba(255, 214, 165, 1);
+        text-align: center;
+    }
+    .logo{    
+        position: absolute;
+        left:50%;
+        top: 10px;
+        transform: translateX(-50%);
+        border-radius:  10px;
+    }
+    .menu{
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .menu > li{width: 70px;}
+    .button{
+        position: absolute;
+        left: 50%;
+        top:170px;
+        transform: translateX(-50%);
+        height: 30px;
+    }
+    .p{
+        flex-basis: 100%;
+        padding-left: 40px;
+    }
+    .Horizontal_footer_line{
+        display:block;
+        width: 300px;
+    }
+}
+
+/* responsive styling.finish */
+
+/* global styling.start */
+
+/* Web's Header style */
+nav{
+    position: relative;
+    width: 100%;
+    background-color: rgba(255, 214, 165, 1);
+    text-align: center;
+}
+.logo{
+    position: absolute;
+    width: 102px;
+    height: 100px;
+    background-color: rgba(189, 178, 255, 1);
+    text-align: center;
+    padding-top:40px ;
+}
+.button{
+    position: absolute;
+    width: max-content;
+    background-color: rgba(240, 248, 255, 0);
+}
+.white-rectangle{
+    height:100%;
+    border: 1px solid rgba(255, 0, 0, 0);
+    border-radius: 10px;
+    background-color:  rgba(255, 255, 252, 1)
+}
+.blue-rectangle{
+    height:100%;
+    border: 1px solid rgba(255, 0, 0, 0);
+    border-radius: 10px;
+    background-color: rgba(160, 196, 255, 1);
+}
+.menu{
+    position: absolute;
+    width:max-content;
+    margin-right:10px
+}
+.menu > li{
+    display: inline-block;
+    height: 35px;
+    margin: 0px 4px;
+    background-color: rgba(255, 173, 173, 1);
+    list-style: none;
+}
+.title{
+    font-size: larger;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+/* Web's Main body style */
+
+.body{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    gap: 25px;
+}
+.flex-box{
+    width: 300px;
+    height: 400px;
+    flex-grow: 0;
+    border-radius: 10px;
+    border: 1px solid gray;
+    text-align: center;
+}
+.flex-box-header{
+    position: relative;
+    height: 15%;
+}
+.flex-box-avatar{
+    position: absolute;
+    left: 10px;
+    top:15px;
+    padding-top: 2px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+    background-color: rgba(192, 192, 217, 0.152);
+}
+.flex-box-header-header{
+    position: absolute;
+    left: 60px;
+    top: 15px;
+}
+.flex-box-subheader{
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    opacity: 0.6;font-size: 16px;
+}
+.flex-box-share-icon{
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(137, 43, 226, 0);
+}
+.Share-Modal-container{
+    display: block;
+    position: fixed;
+    background-color: rgba(128, 128, 128, 0.568);
+    z-index: 2;
+    width: 1440px;
+    height:2000px;
+
+}
+.Modal-content{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height:270px;
+    background-color:rgb(255, 255, 255);
+    z-index:3;
+    border-radius: 10px;
+}
+.Modal-flex-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 15px;
+    padding-left: 26px;
+    padding-bottom: 70px;
+}
+.Modal-flex-item{
+    font-size: 12px;
+}
+.circle{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding-top: 16px;
+    margin-bottom: 8px;
+    background-color: rgba(128, 128, 128, 0.103);
+    z-index: -1;
+    text-align: center;
+}
+.Modal-paragraph{
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 14px;
+    font-weight: 400;
+    color: gray;
+}
+.Modal-form{
+    position: absolute;
+    width:350px;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+   
+}
+input{
+    width: 100%;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.226);
+    border: 1px solid rgba(128, 128, 128, 0);
+}
+.copy-icon{
+    position: absolute;
+    top: 210px;
+    right: 40px;
+}
+.flex-box-images{
+    width:100%;
+    height: 60%;
+    border: 1px solid gray;
+}
+.flex-box-paragraphs{
+    font-size: 18px;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 100%;
+}
+hr{
+    opacity: 0.6;
+}
+
+/* Web's Footer style */
+
+.footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 20px;
+}
+.p{
+    font-size: 16px;
+    opacity: 0.7;
+    line-height: 30px;
+    margin-top:30px ;
+}
+.About{
+    flex-basis: 2;
+    width: 300px;
+}
+.LINK{
+    background-color: rgba(0, 0, 255, 0);
+    height: 200px;
+    flex-basis: 1;
+}
+.CONTACT{
+    height: 200px;
+    flex-basis: 1;
+}
+.PRODUCT{
+    height: 200px;
+}
+.vertical-line{
+    width: 2px;
+    height: 200px;
+    background-color: gray;
+    margin: 40px 20px 0px 0px;
+}
+.footer-button{
+    text-align: center;
+    font-size: 18px;
+    opacity: 0.8;
+    margin-top: 5px;
+}
