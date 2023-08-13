@@ -1,8 +1,16 @@
-const Modal_item_collector = document.querySelectorAll("Modal-flex-item");
-const Modal_circle_collector=document.querySelectorAll("circle");
-const Modal_p_collector=document.querySelectorAll(p);
+let shareIcon =document.querySelectorAll('.flex-box-share-icon');
+let Modal = document.getElementById("Share-Modal-container");
+const clse = document.getElementById("close");
 
-Modal_item_collector.addEventListener("mouseenter",function(){
-    Modal_circle_collector.style.backgroundColor="orange";
-    Modal_p_collector.style.backgroundColor="orange";
+function openModal(){
+    Modal.style.display='block';
+};
+function closeModal(){
+    Modal.style.display='none'
+};
+clse.addEventListener("click",closeModal);
+
+shareIcon.forEach(function(item){
+    item.addEventListener("click",openModal);
 })
+
