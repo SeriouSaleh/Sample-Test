@@ -225,6 +225,7 @@ nav{
     transform: translate(-50%, -50%);
     width: 400px;
     height:270px;
+    color: rgb(0, 0, 0);
     background-color:rgb(255, 255, 255);
     z-index:3;
     border-radius: 10px;
@@ -355,4 +356,7 @@ hr{
     font-size: 18px;
     opacity: 0.8;
     margin-top: 5px;
+}
+html{
+    background-color: rgb(255, 255, 255);
 }
